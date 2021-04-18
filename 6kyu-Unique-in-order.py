@@ -1,3 +1,5 @@
+# This is a better sol
+
 def unique_in_order(iterable):
     newList = []
     for i in iterable:
