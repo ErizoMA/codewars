@@ -1,15 +1,19 @@
 def namelist(names):
     # your code here
-    if len(names) > 0:
 
-        listValues = []
+    listValues = []
 
-        for i in names:
-            listValues += i.values()
+    for i in names:
+        listValues += i.values()
+    if len(names) > 1:
+        string = ""
+        for i in range(len(listValues)-1):
+            string += str(listValues[i])+", "
+        string2 = string[:-2]+" & "+str(listValues[-1])
+        return string2
+    if len(names) == 1:
+        return listValues[-1]
 
-        strListValues = " & ".join(listValues)
-
-        return strListValues.replace("&", ",", len(listValues)-2)
     else:
         return ""
 
